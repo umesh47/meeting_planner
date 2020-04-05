@@ -4,8 +4,7 @@ from datetime import datetime
 
 
 def welcome(request):
-    return HttpResponse("Welcome to the Meeting Planner!")
-
+    return render(request, "website/welcome.html",{"message": "THis data was sent from views","x":"demo from views"})
 
 
 def date(request):
