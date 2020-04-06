@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Room</title>
+</head>
+<body>
+    <p>This is the list of available room for the meetings.</p>
+    <ul>
+        {% for room in rooms %}
+            <li>
+                {{room}}
+            </li>
+        {% endfor%}
+    </ul>
+</body>
+</html>
