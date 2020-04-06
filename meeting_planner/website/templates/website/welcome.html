@@ -1,20 +1,16 @@
-{% load static %}
+ {% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-    <link rel="stylesheet" href="{% static 'website/style.css' %}">
-</head>
-<body>
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
     <h1>Welcome to the Meeting Planner!</h1>
     <p>
         This is the demo application for the course
         <em>Django: Getting Started</em>
         on  <a href="https://www.pluralsight.com">Pluralsight</a>
     </p>
-    <img src="{% static 'website/images.png' %}" width="100px">
+
     <h2>Meetings</h2>
     <ul>
         {% for meeting in meetings%}
@@ -26,5 +22,4 @@
         {% endfor%}
     </ul>
     <a href="{% url 'rooms' %}">Room list</a>
-</body>
-</html>
+{% endblock %}
